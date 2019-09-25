@@ -3,7 +3,7 @@
 
 
 ## 說明
-使用語言：C  
+使用語言：C++
 外部函式庫：GNU MP、PicoSHA256(https://github.com/okdshin/PicoSHA2)  
 >a.變數命名  
 	>- p、q、g為公開參數  
