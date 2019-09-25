@@ -18,7 +18,7 @@
 	>-Signature.txt 包含簽章  
 	>-Verification.txt 用來驗證  
 	>-readme 用來說明程式使用方法  
-	>-KAC.cpp 產生公私鑰，模擬key authentication center
+	>-KAC.cpp 產生公私鑰，模擬key authentication center      
 	>-Signature.cpp 對User.txt內容進行簽章輸出至Signature.txt
 	>-Verification.cpp 對Verification.txt簽章內容進行驗證
 
