@@ -20,12 +20,9 @@ int main()
 	gmp_randseed_ui(grt, time(NULL));
 
 	///public parameter generator
-	cout<<"Start generating parameter and keys...\n";
 	char *Param = "parameter.txt";
 	FILE *ParamF;
 	ParamF = fopen(Param,"wb");
-    Sleep(500);
-	cout<<"|#    | generate parameters..."<<endl;
 
 	mpz_t q, temp , p; ///p = temp * q +1
 	mpz_init(q);
@@ -56,9 +53,7 @@ int main()
         prime = mpz_probab_prime_p(p,10);///check it's prime or not
 
 	}while (prime!=1);
-    Sleep(500);
 
-    cout<<"|##   | compute parameters..."<<endl;
 	mpz_t g , h ; ///g^q mod p =1 , g= h^((p-1)/q) mod p
 	mpz_init(g);
 	mpz_init(h);
@@ -82,10 +77,8 @@ int main()
 	mpz_out_str(ParamF,16,g);
 	fprintf(ParamF,"\n");
 	fclose(ParamF);
-	Sleep(500);
 	///--------------------------------------------------------------------------------------///
 	///private key
-	cout<<"|###  | generate private key..."<<endl;
     char *Private = "PrivateKey.txt";
     FILE *PriF;
     PriF = fopen(Private,"wb");
@@ -100,10 +93,8 @@ int main()
     mpz_out_str(PriF,16,x);
     fprintf (PriF,"\n");
     fclose(PriF);
-    Sleep(500);
 
 	///public key
-	cout<<"|#### | generate public key..."<<endl;
     char *Public = "PublicKey.txt";
     FILE *PuF;
     PuF = fopen(Public,"wb");
@@ -117,7 +108,6 @@ int main()
     mpz_out_str(PuF,16,y);
     fprintf(PuF,"\n");
     fclose(PuF);
-    cout<<"|#####| complete"<<endl;
     system("PAUSE");
     return 0;
 }
