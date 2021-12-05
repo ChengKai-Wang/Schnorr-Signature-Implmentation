@@ -1,4 +1,4 @@
-# Schnorr-Signature-Implmented-By-C
+# Schnorr-Signature-Implmented-By-C++
 ![](https://i.imgur.com/u9gZvse.png)<br />
 
 
